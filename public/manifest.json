@@ -1,0 +1,21 @@
+{
+  "name": "Smake",
+  "short_name": "Smake",
+  "description": "Matinnsjekkinger og oppdagelse i Bergen",
+  "start_url": "/feed",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
