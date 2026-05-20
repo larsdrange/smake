@@ -28,7 +28,7 @@ export default async function RestaurantPage({ params }: Props) {
 
   const { data: { user } } = await supabase.auth.getUser();
 
-  const [{ data: checkIns }, { data: isFavorite }, { data: checkinCount }] = await Promise.all([
+  const [{ data: checkIns }, { data: isFavorite }, { count: checkinCount }] = await Promise.all([
     supabase
       .from("check_in_feed")
       .select("*")
@@ -116,7 +116,7 @@ export default async function RestaurantPage({ params }: Props) {
                 {avgRating} snitt
               </span>
             )}
-            <span>{checkinCount?.count ?? 0} innsjekkinger</span>
+            <span>{checkinCount ?? 0} innsjekkinger</span>
             {r.google_rating && (
               <span className="flex items-center gap-1 text-gray-400">
                 <Star size={12} />
