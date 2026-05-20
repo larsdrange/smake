@@ -7,7 +7,7 @@ import { createClient } from "@/lib/supabase/client";
 import { formatRelativeTime } from "@/lib/utils";
 
 interface Props {
-  checkIn: Record<string, unknown>;
+  checkIn: Record<string, string | number | null | undefined>;
 }
 
 export function AdminCheckInRow({ checkIn: initial }: Props) {
